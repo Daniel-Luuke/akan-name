@@ -19,11 +19,12 @@ header a{
     height: auto;
     display: flex;
 }
-#about-paragraph{
-    font-size: 600%;
+#about-p{
+    font-size: 24px;
     margin: 20px;
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: black;
 }
 body{
   color: #444;
@@ -32,5 +33,7 @@ body{
   background-color: #f4f6f9;
   line-height: 1.2;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-
+  background-image: url(african-savannah.webp);
+  image-rendering: auto;
+  background-size: cover;
 }
