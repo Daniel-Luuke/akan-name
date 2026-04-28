@@ -31,15 +31,11 @@ button.addEventListener("click", (event) => {
 
   // Validate inputs
   if (
-    isNaN(year) ||
-    isNaN(month) ||
-    isNaN(date) ||
-    month < 1 ||
-    month > 12 ||
-    date < 1 ||
-    date > 31
+    birthDate.getFullYear() !== year ||
+    birthDate.getMonth() !== month - 1 ||
+    birthDate.getDate() !== date
   ) {
-    resultParagraph.textContent = "Please enter valid date, month, and year.";
+    resultParagraph.textContent = "Please enter a valid date.";
     return;
   }
 
