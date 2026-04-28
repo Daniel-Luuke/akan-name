@@ -24,18 +24,20 @@ button.addEventListener("click", (event) => {
   const date = parseInt(document.querySelector("#date").value, 10);
   const genderElement = document.querySelector('input[name="gender"]:checked');
 
-  if (!year || !month || !date) {
+  if (!year || !month || !date ||!genderElement) {
     resultParagraph.textContent = "Please fill in all fields.";
-    return;
-  }
-
-  if (!genderElement) {
-    resultParagraph.textContent = "Please select your gender.";
     return;
   }
 
   if (month < 1 || month > 12 || date < 1 || date > 31) {
     resultParagraph.textContent = "Please enter a valid date.";
+    return;
+  }
+  const daysInMonth = new Date(year, month, 0).getDate();
+
+//   ensures the day entered does not exceed the days in the month entered //
+  if (date > daysInMonth) {
+    resultParagraph.textContent = `Invalid date: Month ${month} in ${year} has only ${daysInMonth} days.`;
     return;
   }
 
