@@ -4,17 +4,12 @@ header.style.backgroundColor = "blue";
 const h1 = document.querySelector("h1");
 const headerParagraph = document.querySelector("#about-p");
 const button = document.querySelector("#submit-button");
+const clearButton = document.querySelector("#clear-button");
+const resultParagraph = document.querySelector("#result");
 
 // Arrays for Akan names
-const maleNames = [
-  "Kwasi",
-  "Kwadwo",
-  "Kwabena",
-  "Kwaku",
-  "Yaw",
-  "Kofi",
-  "Kwame",
-];
+const maleNames = [ "Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame",];
+
 const femaleNames = ["Akosau", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
 
 button.addEventListener("click", (event) => {
@@ -28,7 +23,7 @@ button.addEventListener("click", (event) => {
   const genderElement = document.querySelector('input[name="gender"]:checked');
 
   if (!genderElement) {
-    headerParagraph.textContent = "Please select your gender.";
+    resultParagraph.textContent = "Please select your gender.";
     return;
   }
 
@@ -44,7 +39,7 @@ button.addEventListener("click", (event) => {
     date < 1 ||
     date > 31
   ) {
-    headerParagraph.textContent = "Please enter valid date, month, and year.";
+    resultParagraph.textContent = "Please enter valid date, month, and year.";
     return;
   }
 
@@ -61,5 +56,19 @@ button.addEventListener("click", (event) => {
   }
 
   // Display the result
-  headerParagraph.textContent = `Your Akan name is ${name}`;
+  resultParagraph.textContent = `Your Akan name is ${name}`;
+});
+
+clearButton.addEventListener("click", () => {
+  // Clear all inputs
+  document.querySelector("#date").value = "";
+  document.querySelector("#month").value = "";
+  document.querySelector("#year-of-birth").value = "";
+
+  // Uncheck radio buttons
+  const radios = document.querySelectorAll('input[name="gender"]');
+  radios.forEach((radio) => (radio.checked = false));
+
+  // Clear the result
+  resultParagraph.textContent = "";
 });
