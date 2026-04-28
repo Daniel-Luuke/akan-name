@@ -1,8 +1,5 @@
 const header = document.querySelector("header");
-header.style.backgroundColor = "blue";
 
-const h1 = document.querySelector("h1");
-const headerParagraph = document.querySelector("#about-p");
 const button = document.querySelector("#submit-button");
 const clearButton = document.querySelector("#clear-button");
 const resultParagraph = document.querySelector("#result");
@@ -10,7 +7,7 @@ const resultParagraph = document.querySelector("#result");
 // Arrays for Akan names
 const maleNames = [ "Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame",];
 
-const femaleNames = ["Akosau", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
+const femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
 
 button.addEventListener("click", (event) => {
   // prevent form from refreshing page
