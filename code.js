@@ -19,6 +19,10 @@ button.addEventListener("click", (event) => {
   const date = parseInt(document.querySelector("#date").value);
   const genderElement = document.querySelector('input[name="gender"]:checked');
 
+  // Check empty fields
+  if (!year || !month || !date){
+    resultParagraph.textContent = "Please fill in the fields."
+  }
   if (!genderElement) {
     resultParagraph.textContent = "Please select your gender.";
     return;
