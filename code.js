@@ -29,7 +29,7 @@ button.addEventListener("click", (event) => {
     return;
   }
 
-  if (month < 1 || month > 12 || date < 1 || date > 31) {
+  if (month < 1 || month > 12 || date < 1 || date > 31 ||year < 1900 || year > 2100) {
     resultParagraph.textContent = "Please enter a valid date.";
     return;
   }
