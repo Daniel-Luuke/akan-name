@@ -98,19 +98,21 @@ section{
 }
 table {
   width: 100%;
-  margin-top: 14px;
+  margin-top: 15px;
   border-collapse: collapse;
+  border-radius: 5%;
 }
 table th,
 table td {
-  padding: 12px;
+  padding: 10px;
   text-align: left;
-  border: 1px solid #ddd;
+  border: 3px solid #110f0f;
+  border-radius: 10%;
 }
 table th {
   background-color: #f1f1f1;
   font-weight: 600;
-  color: #333;
+  color: #090808;
 }
 table tr:nth-child(even) {
   background-color: #f9f9f9;
