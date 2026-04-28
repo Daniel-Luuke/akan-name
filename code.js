@@ -1,4 +1,4 @@
-const header = document.querySelector("header");
+const form = document.getElementById(akan-f)
 
 const button = document.querySelector("#submit-button");
 const clearButton = document.querySelector("#clear-button");
