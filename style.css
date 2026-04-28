@@ -16,3 +16,9 @@ header a{
     height: auto;
     display: flex;
 }
+#about-paragraph{
+    font-size: 600%;
+    margin: 20px;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
