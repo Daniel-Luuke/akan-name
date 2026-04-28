@@ -1,7 +1,10 @@
 header{
-    background-color: #f0f0f0;
+    background-color: #7f7a7a;
     padding: 0px;
     text-align: center;
+    background-image: url(stars.webp);
+    image-rendering: auto;
+    background-size: cover;
    
 }
 
@@ -21,4 +24,13 @@ header a{
     margin: 20px;
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+body{
+  color: #444;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f6f9;
+  line-height: 1.2;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
 }
