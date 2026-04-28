@@ -10,4 +10,9 @@ let MM;
 let DD;
 let d;
 
+button.addEventListener("click", (event) => {
+  // prevent form from refreshing page
+  event.preventDefault();
 
+  // retreive values from the form
+  const CC = document.querySelector("#").value;
