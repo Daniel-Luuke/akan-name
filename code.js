@@ -35,7 +35,7 @@ button.addEventListener("click", (event) => {
   }
   const daysInMonth = new Date(year, month, 0).getDate();
 
-//   ensures the day entered does not exceed the days in the month entered //
+ // ensures the day entered does not exceed the days in the month entered //
   if (date > daysInMonth) {
     resultParagraph.textContent = `Invalid date: Month ${month} in ${year} has only ${daysInMonth} days.`;
     return;
